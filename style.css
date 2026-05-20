@@ -1,33 +1,24 @@
-/* ============================================================
-   КУРСОВ ПРОЕКТ: РИМ – МОЕТО ЛЮБИМО МЯСТО
-   Шрифтове: Playfair Display (заглавия) + Lora (текст)
-   Стил: топъл/елегантен – бежово, кафяво, златно
-   ============================================================ */
 
-
-/* ===== 1. CSS ПРОМЕНЛИВИ (ЦВЕТОВА ПАЛИТРА И ШРИФТОВЕ) ===== */
 :root {
-    /* Цветове */
-    --color-bg:          #faf6f0;   /* топъл крем – основен фон */
-    --color-card:        #ffffff;   /* бяло за картички */
-    --color-dark:        #2c1810;   /* тъмно кафяво – основен текст */
-    --color-brown:       #8b6f47;   /* топло кафяво – вторичен акцент */
-    --color-gold:        #c9a961;   /* златно – акцентен цвят */
-    --color-text:        #3a2818;   /* основен цвят на текста */
-    --color-text-light:  #6b5544;   /* по-светъл текст */
-    --color-border:      #e8dcc8;   /* фини граници */
+    --color-bg:          #faf6f0;   
+    --color-card:        #ffffff;  
+    --color-dark:        #2c1810;   
+    --color-brown:       #8b6f47;   
+    --color-gold:        #c9a961;   
+    --color-text:        #3a2818;   
+    --color-text-light:  #6b5544;   
+    --color-border:      #e8dcc8;   
 
-    /* Шрифтове */
+    
     --font-heading: 'Playfair Display', Georgia, serif;
     --font-body:    'Lora', Georgia, serif;
 
-    /* Сенки */
+    
     --shadow-soft:  0 4px 20px rgba(44, 24, 16, 0.08);
     --shadow-hover: 0 12px 35px rgba(44, 24, 16, 0.18);
 }
 
 
-/* ===== 2. ОБЩИ ИЗХОДНИ СТИЛОВЕ (CSS RESET) ===== */
 * {
     margin: 0;
     padding: 0;
@@ -60,12 +51,11 @@ a {
 }
 
 
-/* ===== 3. HEADER С НАВИГАЦИЯ – ИЗПОЛЗВА FLEXBOX ===== */
 .site-header {
     background-color: var(--color-bg);
     border-bottom: 1px solid var(--color-border);
     padding: 1.5rem 2rem;
-    position: sticky;       /* остава отгоре при скрол */
+    position: sticky;      
     top: 0;
     z-index: 100;
 }
@@ -73,10 +63,10 @@ a {
 .header-container {
     max-width: 1200px;
     margin: 0 auto;
-    /* ⭐ FLEXBOX – подравнява лого и навигация в една редица */
+  
     display: flex;
-    justify-content: space-between;  /* лого вляво, меню вдясно */
-    align-items: center;             /* центрира вертикално */
+    justify-content: space-between;  
+    align-items: center;             
 }
 
 .logo {
@@ -94,7 +84,6 @@ a {
 }
 
 .main-nav ul {
-    /* ⭐ FLEXBOX – подрежда линковете в редица */
     display: flex;
     gap: 2.5rem;
     list-style: none;
@@ -118,7 +107,7 @@ a {
     color: var(--color-gold);
 }
 
-/* Златна линия под активния линк */
+
 .main-nav a.active::after {
     content: '';
     position: absolute;
@@ -130,15 +119,13 @@ a {
 }
 
 
-/* ===== 4. HERO СЕКЦИЯ (НАЧАЛНА СТРАНИЦА) ===== */
+
 .hero {
-    /* фоново изображение + полупрозрачно тъмно покритие за четимост */
+   
     background:
         linear-gradient(rgba(44, 24, 16, 0.55), rgba(44, 24, 16, 0.55)),
         url('https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=1600&q=80') center / cover;
     min-height: 75vh;
-
-    /* ⭐ FLEXBOX – центрира съдържанието и хоризонтално, и вертикално */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -177,7 +164,6 @@ a {
 }
 
 
-/* ===== 5. HERO НА ВЪТРЕШНИ СТРАНИЦИ (по-малък) ===== */
 .page-hero {
     background-color: var(--color-card);
     padding: 5rem 2rem 4rem;
@@ -202,7 +188,6 @@ a {
 }
 
 
-/* ===== 6. СЕКЦИЯ "ЗА РИМ" ===== */
 .about {
     max-width: 800px;
     margin: 0 auto;
@@ -215,7 +200,6 @@ a {
     margin-bottom: 0.5rem;
 }
 
-/* Декоративна златна линия под заглавието */
 .about h2::after {
     content: '';
     display: block;
@@ -237,7 +221,6 @@ a {
 }
 
 
-/* ===== 7. СЕКЦИЯ ЗАБЕЛЕЖИТЕЛНОСТИ – ИЗПОЛЗВА CSS GRID ===== */
 .attractions {
     max-width: 1200px;
     margin: 0 auto;
@@ -263,10 +246,10 @@ a {
     font-size: 2.5rem;
 }
 
-/* ⭐ CSS GRID – 3 равни колони за картичките със забележителности */
+
 .attractions-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);   /* 3 колони с еднаква ширина */
+    grid-template-columns: repeat(3, 1fr);   
     gap: 2rem;
 }
 
@@ -315,7 +298,6 @@ a {
 }
 
 
-/* ===== 8. СЕКЦИЯ "ЗАЩО РИМ" ===== */
 .why-rome {
     background-color: var(--color-dark);
     color: rgba(255, 255, 255, 0.9);
@@ -348,7 +330,6 @@ a {
 }
 
 .reasons-list li {
-    /* ⭐ FLEXBOX – номер вляво, текст вдясно */
     display: flex;
     gap: 2rem;
     padding: 1.8rem 0;
@@ -378,13 +359,10 @@ a {
 }
 
 
-/* ===== 9. ГАЛЕРИЯ – ИЗПОЛЗВА CSS GRID С НЕРАВНИ КЛЕТКИ ===== */
 .gallery {
     max-width: 1200px;
     margin: 0 auto;
     padding: 4rem 2rem;
-
-    /* ⭐ CSS GRID – 4 колони с интересен подреден layout */
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: 220px;
@@ -398,13 +376,11 @@ a {
     cursor: pointer;
 }
 
-/* Първото изображение заема 2 колони и 2 реда */
 .gallery-item--large {
     grid-column: span 2;
     grid-row: span 2;
 }
 
-/* "Висока" клетка – заема 2 реда */
 .gallery-item--tall {
     grid-row: span 2;
 }
@@ -440,7 +416,6 @@ a {
 }
 
 
-/* ===== 10. СЕКЦИЯ ЦИТАТ ===== */
 .quote {
     background-color: var(--color-card);
     padding: 5rem 2rem;
@@ -472,13 +447,10 @@ a {
 }
 
 
-/* ===== 11. КОНТАКТНА СТРАНИЦА – ИЗПОЛЗВА И GRID, И FLEXBOX ===== */
 .contact {
     max-width: 1200px;
     margin: 0 auto;
     padding: 5rem 2rem;
-
-    /* ⭐ CSS GRID – две колони (информация + форма) */
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
@@ -499,7 +471,6 @@ a {
 }
 
 .contact-list li {
-    /* ⭐ FLEXBOX – етикет вляво, стойност вдясно */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -528,7 +499,6 @@ a {
 }
 
 .contact-form {
-    /* ⭐ FLEXBOX – подрежда полетата вертикално с равно разстояние */
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
@@ -594,7 +564,6 @@ a {
 }
 
 
-/* ===== 12. FOOTER – ИЗПОЛЗВА FLEXBOX ===== */
 .site-footer {
     background-color: var(--color-dark);
     color: rgba(255, 255, 255, 0.65);
@@ -604,7 +573,6 @@ a {
 .footer-container {
     max-width: 1200px;
     margin: 0 auto;
-    /* ⭐ FLEXBOX – подрежда 3 елемента в редица */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -635,14 +603,9 @@ a {
 }
 
 
-/* ============================================================
-   ===== 13. РЕСПОНСИВЕН ДИЗАЙН – МОБИЛНИ УСТРОЙСТВА ===========
-   ============================================================ */
 
-/* ⭐⭐⭐ МОБИЛНА ВЕРСИЯ (макс. 768px) */
 @media (max-width: 768px) {
 
-    /* Header става вертикален – лого отгоре, меню отдолу */
     .header-container {
         flex-direction: column;
         gap: 1rem;
@@ -654,7 +617,6 @@ a {
         justify-content: center;
     }
 
-    /* По-малки заглавия за hero */
     .hero {
         min-height: 60vh;
     }
@@ -672,12 +634,10 @@ a {
         font-size: 2.3rem;
     }
 
-    /* Картичките стават една под друга */
     .attractions-grid {
         grid-template-columns: 1fr;
     }
 
-    /* Галерията става в 2 колони и без специални големи клетки */
     .gallery {
         grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: 180px;
@@ -689,13 +649,11 @@ a {
         grid-row: span 1;
     }
 
-    /* Reasons list – номер над текст */
     .reasons-list li {
         flex-direction: column;
         gap: 0.5rem;
     }
 
-    /* Контакти – една колона */
     .contact {
         grid-template-columns: 1fr;
         gap: 3rem;
@@ -708,13 +666,11 @@ a {
         gap: 0.3rem;
     }
 
-    /* Footer вертикално */
     .footer-container {
         flex-direction: column;
         text-align: center;
     }
 
-    /* По-малки разстояния */
     .about,
     .attractions {
         padding: 3rem 1.5rem;
@@ -730,13 +686,9 @@ a {
 }
 
 
-/* ============================================================
-   ===== 14. ДЕСКТОП – ПО-ГОЛЕМИ ЕКРАНИ (мин. 1200px) =========
-   ============================================================ */
 
 @media (min-width: 1200px) {
 
-    /* По-голямо заглавие на началната страница */
     .hero {
         min-height: 85vh;
     }
@@ -758,12 +710,10 @@ a {
         font-size: 4rem;
     }
 
-    /* По-голям gap между картичките */
     .attractions-grid {
         gap: 2.5rem;
     }
 
-    /* По-впечатляваща галерия */
     .gallery {
         grid-auto-rows: 260px;
         gap: 1.5rem;
