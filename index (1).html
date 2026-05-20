@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рим – Вечният град | Моето любимо място</title>
+
+    <!-- Google Fonts: Playfair Display за заглавия, Lora за основен текст -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ===== HEADER С НАВИГАЦИЯ (Flexbox) ===== -->
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                Roma <span>Aeterna</span>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Начало</a></li>
+                    <li><a href="galeriya.html">Галерия</a></li>
+                    <li><a href="kontakti.html">Контакти</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ===== HERO СЕКЦИЯ ===== -->
+        <section class="hero">
+            <div class="hero-content">
+                <p class="hero-tagline">— Моето любимо място —</p>
+                <h1 class="hero-title">Рим</h1>
+                <p class="hero-subtitle">Вечният град, където историята живее на всяка улица</p>
+            </div>
+        </section>
+
+        <!-- ===== СЕКЦИЯ "ЗА РИМ" ===== -->
+        <section class="about">
+            <article>
+                <h2>За Вечния град</h2>
+                <p class="lead">
+                    Рим е столицата на Италия и един от най-старите градове в Европа.
+                    Основан през 753 г. пр. Хр., градът е сърцето на една от
+                    най-великите цивилизации в историята.
+                </p>
+                <p>
+                    Разходката из улиците на Рим е като пътуване във времето. От
+                    древния Колизеум, през елегантните барокови площади, до
+                    съвременните кафенета на Трастевере – градът съчетава
+                    хиляди години история с жив, шумен и страстен живот.
+                </p>
+                <p>
+                    Тук всеки камък разказва история, а всеки фонтан крие легенда.
+                    Не случайно се казва: <em>„Roma non basta una vita"</em> – един живот
+                    не стига, за да опознаеш Рим.
+                </p>
+            </article>
+        </section>
+
+        <!-- ===== СЕКЦИЯ ЗАБЕЛЕЖИТЕЛНОСТИ (CSS Grid) ===== -->
+        <section class="attractions">
+            <header class="section-header">
+                <p class="section-eyebrow">Какво да видим</p>
+                <h2>Топ забележителности</h2>
+            </header>
+
+            <div class="attractions-grid">
+
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=800&q=80"
+                             alt="Колизеумът в Рим">
+                    </div>
+                    <div class="card-body">
+                        <h3>Колизеумът</h3>
+                        <p>Най-големият амфитеатър, построен някога. Символ на римската
+                        инженерна мисъл и място на легендарни гладиаторски битки.</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1525874684015-58379d421a52?w=800&q=80"
+                             alt="Фонтан Треви">
+                    </div>
+                    <div class="card-body">
+                        <h3>Фонтан Треви</h3>
+                        <p>Барокова перла на града. Според легендата, ако хвърлиш
+                        монета във фонтана, ще се върнеш в Рим отново.</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1531572753322-ad063cecc140?w=800&q=80"
+                             alt="Базиликата Свети Петър във Ватикана">
+                    </div>
+                    <div class="card-body">
+                        <h3>Ватикана</h3>
+                        <p>Най-малката държава в света и духовно сърце на католицизма.
+                        Дом на Сикстинската капела и базиликата Свети Петър.</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ===== СЕКЦИЯ "ЗАЩО РИМ" ===== -->
+        <section class="why-rome">
+            <div class="why-rome-inner">
+                <h2>Защо Рим?</h2>
+                <ul class="reasons-list">
+                    <li>
+                        <span class="reason-number">01</span>
+                        <div>
+                            <h3>Жива история</h3>
+                            <p>2700 години история на едно място – от Античността до Барока.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="reason-number">02</span>
+                        <div>
+                            <h3>Кухня</h3>
+                            <p>Истинска паста carbonara, cacio e pepe и най-добрите джелата.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="reason-number">03</span>
+                        <div>
+                            <h3>Атмосфера</h3>
+                            <p>Тесни калдъръмени улички, тераси с лимони и dolce vita.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== FOOTER (Flexbox) ===== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <p class="footer-brand">Roma <span>Aeterna</span></p>
+            <p class="footer-copy">&copy; 2026 · Моето любимо място</p>
+            <p class="footer-note">Изработено за курса „Практикум по уеб дизайн"</p>
+        </div>
+    </footer>
+
+</body>
+</html>
